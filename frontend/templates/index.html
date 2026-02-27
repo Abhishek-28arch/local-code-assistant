@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local AI Coding Assistant</title>
+    <meta name="description"
+        content="AI-powered coding assistant that generates Python code from natural language descriptions.">
+
+    <!-- Google Font — JetBrains Mono for the code feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+
+    <!-- Our styles -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- ── Header ────────────────────────────────────────────────── -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>Local AI Coding Assistant</h1>
+            </div>
+            <p class="subtitle">Fine-tuned CodeGemma • Runs locally on your GPU</p>
+        </div>
+        <div class="header-badge">
+            <span class="status-dot"></span>
+            <span>AI Ready</span>
+        </div>
+    </header>
+
+    <!-- ── Main Chat Area ────────────────────────────────────────── -->
+    <main class="chat-container">
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Welcome message -->
+            <div class="message ai-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="message-header">AI Assistant</div>
+                    <p>Hey! I'm your local AI coding assistant. Ask me to write Python code, solve DSA problems, or
+                        explain algorithms. Here are some things you can try:</p>
+                    <ul class="suggestions">
+                        <li onclick="useSuggestion(this)">Write a binary search function</li>
+                        <li onclick="useSuggestion(this)">Implement a stack using a linked list</li>
+                        <li onclick="useSuggestion(this)">Create a function to find the longest common subsequence</li>
+                        <li onclick="useSuggestion(this)">Write a decorator that measures function execution time</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <form id="chatForm" class="input-form">
+                <div class="input-wrapper">
+                    <textarea id="promptInput" placeholder="Describe the code you want to generate..." rows="1"
+                        required></textarea>
+                    <button type="submit" id="sendBtn" title="Send">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <span class="hint">Press <kbd>Enter</kbd> to send • <kbd>Shift+Enter</kbd> for new line</span>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Our chat logic -->
+    <script src="/static/js/chat.js"></script>
+
+</body>
+
+</html>

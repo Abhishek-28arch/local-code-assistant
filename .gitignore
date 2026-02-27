@@ -1,0 +1,44 @@
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual Environment ──────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Model Weights (large files) ──────────────────────────────────────
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# ── Training Artifacts ───────────────────────────────────────────────
+wandb/
+runs/
+checkpoints/
+*.log
+
+# ── IDE / Editor ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS Files ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── HuggingFace Cache ────────────────────────────────────────────────
+.cache/
+
+# ── Personal / Private Files ─────────────────────────────────────────
+suggestions.txt
+RESUME_BULLETS.md
